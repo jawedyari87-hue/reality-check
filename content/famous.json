@@ -1,0 +1,257 @@
+{
+ "note": "Claims are paraphrased from the linked sources, with only short quotes. Where a prediction wasn't a precise forecast, the rule this app applies is spelled out under it.",
+ "items": [
+  {
+   "id": "frey-osborne-2013",
+   "who": "Carl Benedikt Frey & Michael Osborne",
+   "role": "Oxford Martin School",
+   "date": "2013-09-17",
+   "dateLabel": "Sep 2013",
+   "region": "US",
+   "topic": "Automation",
+   "claim": "47% of US employment is in occupations at high risk of being automated, potentially over the next decade or two.",
+   "quote": "perhaps a decade or two",
+   "deadline": "2033",
+   "sources": [
+    {"name": "The Future of Employment (paper)", "url": "https://oms-www.files.svdcdn.com/production/downloads/academic/The_Future_of_Employment.pdf"}
+   ],
+   "checks": [
+    {"series": "us.employment", "test": "change", "op": "<=", "pct": 0, "start": "2013-09-01", "end": "2033-09-01"}
+   ],
+   "howWeCheck": "If close to half of all jobs were automated away inside 20 years, the number of jobs would shrink. It counts as coming true if US payroll employment is lower in September 2033 than in September 2013.",
+   "caveat": "The paper estimated which jobs could technically be automated, not how many would disappear, and it says so. Headlines turned it into a job-loss forecast.",
+   "lesson": "\"Could be automated\" and \"will be gone\" are different claims. Most headline numbers are the first dressed up as the second."
+  },
+  {
+   "id": "deloitte-2014",
+   "who": "Deloitte, with Frey & Osborne",
+   "role": "Agiletown report",
+   "date": "2014-11-01",
+   "dateLabel": "Nov 2014",
+   "region": "UK",
+   "topic": "Automation",
+   "claim": "35% of existing UK jobs are at high risk of being replaced by technology over the next 20 years, with lower-paid jobs over five times as exposed as higher-paid ones.",
+   "deadline": "2034",
+   "sources": [
+    {"name": "Consultancy.uk summary", "url": "https://www.consultancy.uk/news/1024/deloitte-robots-threatening-a-third-of-uk-workforce"}
+   ],
+   "checks": [
+    {"series": "uk.employment", "test": "change", "op": "<=", "pct": 0, "start": "2014-11-01", "end": "2034-11-01"}
+   ],
+   "howWeCheck": "It counts as coming true if fewer people are in work in the UK in November 2034 than in November 2014.",
+   "caveat": "Like the Frey & Osborne paper, this measured exposure, not predicted losses. Jobs can change rather than vanish.",
+   "lesson": "Twelve years in, the UK has more people in work, not fewer. The jobs changed, but they didn't disappear."
+  },
+  {
+   "id": "pwc-2017",
+   "who": "PwC",
+   "role": "UK Economic Outlook",
+   "date": "2017-03-24",
+   "dateLabel": "Mar 2017",
+   "region": "UK",
+   "topic": "Automation",
+   "claim": "Up to 30% of existing UK jobs could be at high risk of automation by the early 2030s, compared with 38% in the US and 35% in Germany.",
+   "deadline": "early 2030s",
+   "sources": [
+    {"name": "PwC UK Economic Outlook, March 2017, section 4 (PDF)", "url": "https://www.pwc.co.uk/economic-services/ukeo/pwcukeo-section-4-automation-march-2017-v2.pdf"}
+   ],
+   "checks": [
+    {"series": "uk.employment", "test": "change", "op": "<=", "pct": 0, "start": "2017-03-01", "end": "2032-12-01"}
+   ],
+   "howWeCheck": "It counts as coming true if fewer people are in work in the UK at the end of 2032 than in March 2017.",
+   "caveat": "PwC said in the same report that new jobs created elsewhere should largely offset the losses. The scary number is the part that got repeated.",
+   "lesson": "Read past the headline. The same report often argues against its own scariest number."
+  },
+  {
+   "id": "hinton-2016",
+   "who": "Geoffrey Hinton",
+   "role": "AI pioneer, later Nobel laureate",
+   "date": "2016-01-01",
+   "dateLabel": "2016",
+   "region": "Global",
+   "topic": "AI and professions",
+   "claim": "Deep learning would outperform radiologists within five years, so training new radiologists should stop.",
+   "quote": "People should stop training radiologists now.",
+   "deadline": "2021",
+   "sources": [
+    {"name": "The New Republic: a radiologist looks back", "url": "https://newrepublic.com/article/187203/ai-radiology-geoffrey-hinton-nobel-prediction"},
+    {"name": "Quartz: AI promised to revolutionize radiology", "url": "https://qz.com/2016153/ai-promised-to-revolutionize-radiology-but-so-far-its-failing"}
+   ],
+   "manual": {
+    "verdict": "false",
+    "summary": "By 2021, AI tools were being used in radiology, but radiologists weren't replaced. The number of US radiologists kept rising, and both the UK and US report shortages."
+   },
+   "howWeCheck": "There's no public time series for radiologist jobs in this app, so this verdict is a judgement based on the linked sources, not an automatic check.",
+   "caveat": "AI can beat humans on some narrow image-reading tasks. The jobs survived because a radiologist does much more than read images.",
+   "lesson": "The world's leading expert on a technology can be badly wrong about what it does to jobs. Skill at the tech is not skill at the labour market."
+  },
+  {
+   "id": "musk-2019",
+   "who": "Elon Musk",
+   "role": "Tesla CEO, Autonomy Day",
+   "date": "2019-04-22",
+   "dateLabel": "Apr 2019",
+   "region": "US",
+   "topic": "Self-driving",
+   "claim": "Tesla would have over a million self-driving robotaxis on the road in 2020, threatening driving jobs.",
+   "quote": "next year for sure, we'll have over a million robotaxis on the road",
+   "deadline": "2020",
+   "sources": [
+    {"name": "CNBC, 22 Apr 2019", "url": "https://www.cnbc.com/2019/04/22/elon-musk-says-tesla-robotaxis-will-hit-the-market-next-year.html"},
+    {"name": "Motley Fool, Sep 2026 look-back", "url": "https://www.fool.com/investing/2026/09/16/elon-musk-promised-over-a-million-robotaxis-by-202/"}
+   ],
+   "manual": {
+    "verdict": "false",
+    "summary": "There were no Tesla robotaxis in 2020. Six years later Tesla was still only running limited trials."
+   },
+   "context": ["us.postings.driving", "uk.postings.driving"],
+   "howWeCheck": "Resolved from the linked reporting. The chart shows job postings for driving roles, which haven't collapsed.",
+   "caveat": "Self-driving has since progressed (some cities have driverless taxi services), just years later and on a far smaller scale than promised.",
+   "lesson": "Founders' timelines are sales pitches as much as forecasts. The direction can be right while the date is years out."
+  },
+  {
+   "id": "wef-2020",
+   "who": "World Economic Forum",
+   "role": "Future of Jobs Report 2020",
+   "date": "2020-10-21",
+   "dateLabel": "Oct 2020",
+   "region": "Global",
+   "topic": "Jobs created vs destroyed",
+   "claim": "By 2025, 85 million jobs may be displaced by machines while 97 million new roles emerge: a net gain of 12 million.",
+   "deadline": "2025",
+   "sources": [
+    {"name": "WEF press release", "url": "https://www.weforum.org/press/2020/10/recession-and-automation-changes-our-future-of-work-but-there-are-jobs-coming-report-says-52c5162fce/"}
+   ],
+   "checks": [
+    {"series": "uk.employment", "test": "change", "op": ">=", "pct": 0, "start": "2020-10-01", "end": "2025-10-01"},
+    {"series": "us.employment", "test": "change", "op": ">=", "pct": 0, "start": "2020-10-01", "end": "2025-10-01"}
+   ],
+   "howWeCheck": "The global split (85m lost, 97m created) can't be measured from public data. The part that can: did total jobs grow in the UK and the US between Oct 2020 and Oct 2025?",
+   "caveat": "October 2020 was mid-pandemic, so strong growth afterwards was partly recovery rather than new kinds of work.",
+   "lesson": "The net number is the one that matters for you. \"Millions displaced\" makes the headline; a net gain gets less attention."
+  },
+  {
+   "id": "ippr-2024",
+   "who": "IPPR",
+   "role": "UK think tank",
+   "date": "2024-03-27",
+   "dateLabel": "Mar 2024",
+   "region": "UK",
+   "topic": "Generative AI",
+   "claim": "In a worst case, up to 7.9 million UK jobs could be lost as firms adopt generative AI more deeply. The central scenario was 4.4 million, and the best case no losses at all.",
+   "deadline": null,
+   "sources": [
+    {"name": "IPPR press release", "url": "https://www.ippr.org/media-office/up-to-8-million-uk-jobs-at-risk-from-ai-unless-government-acts-finds-ippr"}
+   ],
+   "checks": [
+    {"series": "uk.employment", "test": "change", "op": "<=", "pct": -13, "start": "2024-03-01", "end": null}
+   ],
+   "howWeCheck": "IPPR gave scenarios without a date, so this can't be scored, only tracked. The central case (4.4m) is about 13% of UK jobs, and that's the line shown here.",
+   "caveat": "The scenarios depended on government policy. IPPR's point was that the outcome is a choice, not fate.",
+   "lesson": "A prediction with no date can never be wrong. Treat it as a warning, not a forecast."
+  },
+  {
+   "id": "tbi-2024",
+   "who": "Tony Blair Institute",
+   "role": "UK think tank",
+   "date": "2024-11-08",
+   "dateLabel": "Nov 2024",
+   "region": "UK",
+   "topic": "Generative AI",
+   "claim": "AI could eventually displace 1 to 3 million UK jobs, but gradually: 60,000 to 275,000 a year at the peak, adding at most the low hundreds of thousands to unemployment before fading.",
+   "deadline": null,
+   "sources": [
+    {"name": "British Safety Council summary", "url": "https://www.britsafe.org/safety-management/2024/ai-could-displace-3m-uk-jobs-but-losses-to-be-offset-by-newly-created-roles-report-finds"}
+   ],
+   "checks": [
+    {"series": "uk.unemployed", "test": "change", "op": ">=", "pct": 20, "start": "2024-11-01", "end": null}
+   ],
+   "howWeCheck": "No deadline, so this is tracked, not scored. The report expected only a small rise in unemployment; a 20%+ jump in the number unemployed would be well beyond it.",
+   "caveat": "UK unemployment has risen since late 2024, and the causes are debated (higher employer costs and weak growth are often cited). The data alone can't tell you how much of it is AI.",
+   "lesson": "A rise in unemployment isn't proof of AI. Look for it concentrated in AI-exposed jobs, such as the software and admin postings on the Data tab."
+  },
+  {
+   "id": "wef-2025",
+   "who": "World Economic Forum",
+   "role": "Future of Jobs Report 2025",
+   "date": "2025-01-08",
+   "dateLabel": "Jan 2025",
+   "region": "Global",
+   "topic": "Jobs created vs destroyed",
+   "claim": "By 2030, 170 million new jobs will be created and 92 million displaced worldwide: a net gain of 78 million, with technology, data and AI roles growing fastest.",
+   "deadline": "2030",
+   "sources": [
+    {"name": "WEF press release", "url": "https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/"}
+   ],
+   "checks": [
+    {"series": "uk.employment", "test": "change", "op": ">=", "pct": 0, "start": "2025-01-01", "end": "2030-12-01"},
+    {"series": "us.employment", "test": "change", "op": ">=", "pct": 0, "start": "2025-01-01", "end": "2030-12-01"}
+   ],
+   "howWeCheck": "The same rule as the 2020 report: are there more jobs in both the UK and the US at the end of 2030 than in January 2025?",
+   "caveat": "It's a survey of employers' expectations, and employers are not reliable forecasters of their own hiring.",
+   "lesson": "Employer surveys tell you what firms plan, and plans change quickly."
+  },
+  {
+   "id": "zuckerberg-2025",
+   "who": "Mark Zuckerberg",
+   "role": "Meta CEO, Joe Rogan podcast",
+   "date": "2025-01-10",
+   "dateLabel": "Jan 2025",
+   "region": "US",
+   "topic": "AI and software jobs",
+   "claim": "During 2025, Meta and other AI companies would have an AI that can effectively work as a mid-level software engineer, writing code.",
+   "quote": "an AI that can effectively be a sort of midlevel engineer",
+   "deadline": "2025",
+   "sources": [
+    {"name": "Entrepreneur, Jan 2025", "url": "https://www.entrepreneur.com/business-news/meta-developing-ai-engineers-to-write-code-instead-of-humans/485806"}
+   ],
+   "context": ["us.postings.software-development", "uk.postings.software-development"],
+   "howWeCheck": "This is a claim about what AI can do, which job data can't settle. The chart shows the closest data: software development job postings. If AI replaced mid-level engineers at scale, these would keep falling.",
+   "caveat": "Software postings fell from their 2022 peak before generative AI was widespread, as interest rates rose and over-hiring was corrected. That makes AI's own effect hard to isolate.",
+   "lesson": "Watch the postings, not the podcasts. The Data tab updates weekly."
+  },
+  {
+   "id": "gates-2025",
+   "who": "Bill Gates",
+   "role": "The Tonight Show",
+   "date": "2025-02-01",
+   "dateLabel": "Feb 2025",
+   "region": "US",
+   "topic": "AI and work",
+   "claim": "Over the next decade, AI will make expertise such as great medical advice and tutoring free and commonplace, and humans won't be needed \"for most things\".",
+   "quote": "Not for most things",
+   "deadline": "2035",
+   "sources": [
+    {"name": "CNBC, Mar 2025", "url": "https://www.cnbc.com/2025/03/26/bill-gates-on-ai-humans-wont-be-needed-for-most-things.html"}
+   ],
+   "checks": [
+    {"series": "us.employment_rate", "test": "reach", "op": "<=", "value": 40, "start": "2025-02-01", "end": "2035-02-01"},
+    {"series": "uk.employment_rate", "test": "reach", "op": "<=", "value": 50, "start": "2025-02-01", "end": "2035-02-01"}
+   ],
+   "howWeCheck": "A generous reading: if humans weren't needed for most things, far fewer would be working. It counts as coming true if, before Feb 2035, the US employment-population ratio falls to 40% (from about 60%) and the UK employment rate to 50% (from about 75%).",
+   "caveat": "Gates was talking about tasks, not necessarily jobs. People can stay employed doing different things, so this test may be unfair to him. You can set your own version in My predictions.",
+   "lesson": "Vague phrases like \"most things\" need turning into numbers before they can be checked, and that's where most predictions quietly escape."
+  },
+  {
+   "id": "amodei-2025",
+   "who": "Dario Amodei",
+   "role": "Anthropic CEO, interview with Axios",
+   "date": "2025-05-28",
+   "dateLabel": "May 2025",
+   "region": "US",
+   "topic": "AI and white-collar jobs",
+   "claim": "AI could eliminate half of all entry-level white-collar jobs and push unemployment to 10-20% within the next one to five years.",
+   "deadline": "May 2030",
+   "sources": [
+    {"name": "Axios, 28 May 2025", "url": "https://www.axios.com/2025/05/28/ai-jobs-white-collar-unemployment-anthropic"}
+   ],
+   "checks": [
+    {"series": "us.unemployment", "test": "reach", "op": ">=", "value": 10, "start": "2026-05-28", "end": "2030-05-28"}
+   ],
+   "context": ["us.youth_unemployment"],
+   "howWeCheck": "It counts as coming true if US unemployment reaches 10% at any point between one and five years after the interview. Youth unemployment is shown for context, since entry-level jobs would be hit first.",
+   "caveat": "He framed it as a risk to prepare for (\"could\"), not a certainty. Disclosure: this app was built by Claude, an AI made by Anthropic, so treat this entry with extra scrutiny.",
+   "lesson": "This is the prediction closest to your own view. It has a date and a number, so by 2030 you'll know."
+  }
+ ]
+}

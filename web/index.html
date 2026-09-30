@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reality Check</title>
+<meta name="description" content="Job-market predictions checked against official UK and US data, with salary comparisons.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0b0b'/%3E%3Cpath d='M8 17l5 5 11-12' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script>
+  try { const t = localStorage.getItem("rc-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <div class="brand">
+      <h1>Reality Check</h1>
+      <span class="tag">Job-market predictions against the real data · UK first, US alongside</span>
+    </div>
+    <div class="top-actions">
+      <button class="btn small" id="refresh" title="Download the latest figures from every source">Refresh data</button>
+      <button class="btn small ghost" id="theme" aria-label="Switch light or dark theme">Theme</button>
+    </div>
+  </div>
+  <nav class="wrap tabs" role="tablist" aria-label="Sections">
+    <button role="tab" data-tab="overview">Overview</button>
+    <button role="tab" data-tab="famous">Famous predictions</button>
+    <button role="tab" data-tab="forecasts">Official forecasts</button>
+    <button role="tab" data-tab="salaries">Salaries</button>
+    <button role="tab" data-tab="data">Explore data</button>
+    <button role="tab" data-tab="mine">My predictions</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div id="notice" class="notice hidden" role="status"></div>
+  <section class="tab" id="tab-overview" role="tabpanel"></section>
+  <section class="tab" id="tab-famous" role="tabpanel"></section>
+  <section class="tab" id="tab-forecasts" role="tabpanel"></section>
+  <section class="tab" id="tab-salaries" role="tabpanel"></section>
+  <section class="tab" id="tab-data" role="tabpanel"></section>
+  <section class="tab" id="tab-mine" role="tabpanel"></section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Data: <a href="https://www.ons.gov.uk/" target="_blank" rel="noopener">ONS</a> ·
+    <a href="https://obr.uk/data/" target="_blank" rel="noopener">OBR</a> ·
+    <a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED</a> (BLS) ·
+    <a href="https://www.bls.gov/oes/" target="_blank" rel="noopener">BLS OEWS</a> ·
+    <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters" target="_blank" rel="noopener">Philadelphia Fed SPF</a> ·
+    <a href="https://github.com/hiring-lab/job_postings_tracker" target="_blank" rel="noopener">Indeed Hiring Lab</a> (CC BY 4.0) ·
+    <a href="https://data.worldbank.org/indicator/PA.NUS.PRVT.PP" target="_blank" rel="noopener">World Bank PPP</a>.
+    Everything is fetched from those public sources and cached on this computer. Nothing is sent anywhere else.
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

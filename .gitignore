@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.tmp
+# data/ holds the downloaded statistics and your own predictions (mine.json).
+# The app recreates and re-downloads it, so none of it is shared.
+data/
